@@ -15,10 +15,14 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ArrayList<TableRow> tableRows = new ArrayList<TableRow>();
 
 private LinearLayout linearLayout;
     private EditText TextEdit1;
@@ -45,7 +49,8 @@ private LinearLayout linearLayout;
 
             @Override
             public void onClick(View v) {
-                linearLayout.addView(createNewTextView(" Date: "+TextEdit1.getText().toString()+" /Mileage: "+ TextEdit2.getText().toString()+" /Fuel: "+TextEdit3.getText().toString()));
+                linearLayout.addView(createNewTextView(
+
             }
         };
     }
