@@ -42,6 +42,75 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
 
+    <TextView
+        android:id="@+id/MileTextView"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="8dp"
+        android:text="Mileage"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <EditText
+        android:id="@+id/TextEdit2"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="207dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="88dp"
+        android:ems="10"
+        android:hint="put mileage"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MileTextView" />
+
+    <TextView
+        android:id="@+id/FueltextView"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="115dp"
+        android:text="Grade"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/gradeTedit"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="207dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="88dp"
+        android:ems="10"
+        android:hint="put Fuel litres"
+        android:inputType="text|number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FueltextView" />
+
+
 
     <Button
         android:id="@+id/StoreBtn"
