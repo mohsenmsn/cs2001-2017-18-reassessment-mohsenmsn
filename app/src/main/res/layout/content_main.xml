@@ -9,13 +9,39 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/dateTextView"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="8dp"
+        android:text="Date"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/TextEdit1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <EditText
+        android:id="@+id/TextEdit1"
+        style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+        android:layout_width="207dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="88dp"
+        android:ems="10"
+        android:hint="date of the transaction"
+        android:inputType="text|textFilter"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
 
     <Button
         android:id="@+id/StoreBtn"
@@ -26,7 +52,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="42dp"
-        android:text="Add"
+        android:text="Store"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
