@@ -8,21 +8,12 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/dateTextView"
         android:layout_width="160dp"
         android:layout_height="32dp"
         android:layout_marginStart="109dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="115dp"
         android:layout_marginBottom="8dp"
         android:text="Date"
@@ -31,6 +22,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/TextEdit1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside" />
@@ -55,7 +47,7 @@
         android:layout_width="160dp"
         android:layout_height="32dp"
         android:layout_marginStart="109dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="115dp"
         android:layout_marginBottom="8dp"
         android:text="Mileage"
@@ -67,7 +59,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.388" />
+        app:layout_constraintVertical_bias="0.19999999" />
 
     <EditText
         android:id="@+id/TextEdit2"
@@ -90,16 +82,18 @@
         android:layout_width="160dp"
         android:layout_height="32dp"
         android:layout_marginStart="109dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="115dp"
+        android:layout_marginBottom="8dp"
         android:text="Fuel"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/TextEdit3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
 
     <EditText
         android:id="@+id/TextEdit3"
@@ -119,7 +113,6 @@
         app:layout_constraintTop_toBottomOf="@+id/FueltextView" />
 
 
-
     <Button
         android:id="@+id/StoreBtn"
         style="@style/Widget.AppCompat.Button.Colored"
@@ -132,9 +125,21 @@
         android:text="Store"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.656" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="325dp"
+        android:layout_height="158dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

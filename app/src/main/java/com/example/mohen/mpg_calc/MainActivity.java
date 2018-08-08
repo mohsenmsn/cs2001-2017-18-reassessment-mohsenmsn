@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
 private LinearLayout linearLayout;
     private EditText TextEdit1;
-//    private EditText TextEdit2;
-//    private EditText TextEdit3;
+    private EditText TextEdit2;
+    private EditText TextEdit3;
     private Button StoreBtn;
 
     @Override
@@ -32,10 +32,12 @@ private LinearLayout linearLayout;
         setContentView(R.layout.activity_main);
         linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
         TextEdit1 = (EditText) findViewById(R.id.TextEdit1);
+        TextEdit2 = (EditText) findViewById(R.id.TextEdit2);
+        TextEdit3 = (EditText) findViewById(R.id.TextEdit3);
         StoreBtn = (Button) findViewById(R.id.StoreBtn);
         StoreBtn.setOnClickListener(onClick());
         TextView textView = new TextView(this);
-        textView.setText("New text");
+        textView.setText("details 1");
     }
 
     private View.OnClickListener onClick() {
@@ -43,7 +45,7 @@ private LinearLayout linearLayout;
 
             @Override
             public void onClick(View v) {
-                linearLayout.addView(createNewTextView(TextEdit1.getText().toString()));
+                linearLayout.addView(createNewTextView(" Date: "+TextEdit1.getText().toString()+" /Mileage: "+ TextEdit2.getText().toString()+" /Fuel: "+TextEdit3.getText().toString()));
             }
         };
     }
@@ -52,7 +54,7 @@ private LinearLayout linearLayout;
         final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         final TextView textView = new TextView(this);
         textView.setLayoutParams(lparams);
-        textView.setText("New text: " + text);
+        textView.setText("Details 1: " + text);
         return textView;
     }
 
