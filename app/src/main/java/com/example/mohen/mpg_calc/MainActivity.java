@@ -1,5 +1,6 @@
 package com.example.mohen.mpg_calc;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -11,24 +12,48 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
+private LinearLayout linearLayout;
+    private EditText TextEdit1;
+//    private EditText TextEdit2;
+//    private EditText TextEdit3;
+    private Button StoreBtn;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
+        TextEdit1 = (EditText) findViewById(R.id.TextEdit1);
+        StoreBtn = (Button) findViewById(R.id.StoreBtn);
+        StoreBtn.setOnClickListener(onClick());
+        TextView textView = new TextView(this);
+        textView.setText("New text");
+    }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+    private View.OnClickListener onClick() {
+        return new View.OnClickListener() {
+
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                linearLayout.addView(createNewTextView(TextEdit1.getText().toString()));
             }
-        });
+        };
+    }
+
+    private TextView createNewTextView(String text) {
+        final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        final TextView textView = new TextView(this);
+        textView.setLayoutParams(lparams);
+        textView.setText("New text: " + text);
+        return textView;
     }
 
     @Override
